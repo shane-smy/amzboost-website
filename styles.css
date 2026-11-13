@@ -132,27 +132,14 @@ p:last-child { margin-bottom: 0; }
 }
 
 .wordmark {
-  font-family: var(--sans);
-  font-weight: 800;
-  font-size: 1.3rem;
-  letter-spacing: -0.045em;
-  color: #fff;
-  text-decoration: none;
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  align-items: center;
+  text-decoration: none;
   margin-right: auto;
 }
-.wordmark em { font-style: normal; color: var(--cyan); font-weight: 800; }
-.wordmark span {
-  font-family: var(--sans);
-  font-size: 0.64rem;
-  font-weight: 600;
-  color: var(--cyan-dim);
-  letter-spacing: 0.01em;
-  transform: translateY(-0.15em);
-  white-space: nowrap;
-}
+.wordmark img { display: block; width: 150px; height: auto; }
+.foot .wordmark { margin-right: 0; }
+.foot .wordmark img { width: 240px; }
 
 .nav {
   display: flex;
