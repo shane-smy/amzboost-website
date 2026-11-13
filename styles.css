@@ -253,6 +253,45 @@ p:last-child { margin-bottom: 0; }
   max-width: 46ch;
 }
 
+.hero__trust {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+.hero__trust img { flex: 0 0 auto; width: 118px; height: auto; }
+.hero__trust .hero__note {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  max-width: 34ch;
+}
+
+@media (max-width: 420px) {
+  .hero__trust { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .trust-inline { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+
+/* Partner badge on a light background */
+.trust-inline {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+.trust-inline img { flex: 0 0 auto; width: 118px; height: auto; }
+.trust-inline p {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--slate);
+  max-width: 38ch;
+}
+
 /* ---------- Statement / ledger block ---------- */
 
 .statement {
