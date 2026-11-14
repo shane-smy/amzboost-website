@@ -401,10 +401,42 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------- Dark band ---------- */
 
+/* Dark sections. Two tones: ultramarine for brand moments (hero, clients,
+   CTA), navy for supporting ones (stats, why-us, footer). */
 .band { background: var(--ink); color: #dde2f2; }
-.band h2, .band h3 { color: #fff; }
+.band--brand { background: var(--brand); color: #d4dcf7; }
+.band h2, .band h3, .band h4 { color: #fff; }
 .band a { color: var(--cyan); }
 .band a:hover { color: #fff; }
+
+/* Components that need re-tuning on a dark ground */
+.band .sect-head p,
+.band .dek,
+.band .stack p,
+.band p { color: #aab6e0; }
+.band--brand .sect-head p,
+.band--brand .dek,
+.band--brand .stack p,
+.band--brand p { color: #b9c4ee; }
+
+.band .stack { border-top-color: rgba(255, 255, 255, 0.3); }
+.band .stack > div { border-bottom-color: rgba(255, 255, 255, 0.16); }
+
+.band .clients { border-color: rgba(255, 255, 255, 0.22); }
+
+.band .btn--ghost { border-color: rgba(255, 255, 255, 0.45); color: #fff; }
+.band .btn--ghost:hover { border-color: var(--cyan); color: var(--cyan); background: transparent; }
+
+.band .todo {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+.band .todo p { color: #c2cdf0; }
+.band .todo__tag {
+  color: #ffc9c2;
+  border-color: rgba(255, 190, 180, 0.45);
+  background: rgba(255, 120, 100, 0.12);
+}
 
 .band__grid {
   display: grid;
