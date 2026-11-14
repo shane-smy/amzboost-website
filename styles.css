@@ -438,6 +438,18 @@ p:last-child { margin-bottom: 0; }
   background: rgba(255, 120, 100, 0.12);
 }
 
+/* Markers drawn in brand blue vanish on a dark ground */
+.band .ticks li::before { border-color: var(--cyan); }
+.band .steps > li::before { color: var(--cyan); }
+.band .steps > li { border-bottom-color: rgba(255, 255, 255, 0.16); }
+.band .steps > li:first-child { border-top-color: rgba(255, 255, 255, 0.3); }
+.band .aside-label { color: #fff; }
+.band .lede { color: #c3cdf2; }
+.band .faq { border-top-color: rgba(255, 255, 255, 0.3); }
+.band .faq details { border-bottom-color: rgba(255, 255, 255, 0.16); }
+.band .faq summary { color: #fff; }
+.band .faq summary::after { color: var(--cyan); }
+
 .band__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -872,17 +884,35 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------- Breadcrumb ---------- */
 
-.crumbs { font-family: var(--sans); font-size: 0.82rem; color: var(--slate); padding-top: 1.5rem; }
-.crumbs a { color: var(--slate); text-decoration: none; }
-.crumbs a:hover { color: var(--ink); text-decoration: underline; }
-.crumbs span { color: var(--rule-strong); padding-inline: 0.4rem; }
+.crumbs { font-family: var(--sans); font-size: 0.82rem; color: #a2b0e2; }
+.crumbs a { color: #a2b0e2; text-decoration: none; }
+.crumbs a:hover { color: #fff; text-decoration: underline; }
+.crumbs span { color: rgba(255, 255, 255, 0.35); padding-inline: 0.4rem; }
 
 /* ---------- Page head (inner pages) ---------- */
+/* Brand blue so it reads as one field with the header above it */
 
-.page-head { border-bottom: 1px solid var(--rule); padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(2.5rem, 5vw, 4rem); }
-.page-head h1 { max-width: 24ch; margin-bottom: 1.3rem; }
-.page-head .lede { max-width: 58ch; }
+.page-head {
+  background: var(--brand);
+  background-image: radial-gradient(circle at 78% 30%, rgba(0, 234, 250, 0.14) 0%, rgba(0, 234, 250, 0) 50%);
+  color: #fff;
+  padding-block: 1.4rem clamp(2.75rem, 5vw, 4rem);
+}
+.page-head h1 { color: #fff; max-width: 24ch; margin-bottom: 1.3rem; }
+.page-head .lede { color: #ccd5f5; max-width: 58ch; }
 .page-head .btn-row { margin-top: 1.9rem; }
+.page-head .crumbs { margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem); }
+.hero .crumbs { margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+
+.page-head .btn--primary { background: #fff; color: var(--brand); }
+.page-head .btn--primary:hover { background: var(--cyan); color: var(--brand-deep); }
+.page-head .btn--ghost { border-color: rgba(255, 255, 255, 0.5); color: #fff; }
+.page-head .btn--ghost:hover { border-color: var(--cyan); color: var(--cyan); background: transparent; }
+
+.band--brand .btn--primary { background: #fff; color: var(--brand); }
+.band--brand .btn--primary:hover { background: var(--cyan); color: var(--brand-deep); }
+.page-head .trust-inline { border-top-color: rgba(255, 255, 255, 0.25); }
+.page-head .trust-inline p { color: #b4c0ea; }
 
 /* ---------- Insights list ---------- */
 
