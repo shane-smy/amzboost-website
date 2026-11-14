@@ -657,7 +657,7 @@ p:last-child { margin-bottom: 0; }
 .todo p + p { margin-top: 0.5rem; }
 
 .clients {
-  max-width: 940px;
+  max-width: 1080px;
   padding-block: clamp(1.5rem, 3vw, 2.1rem);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
@@ -677,6 +677,9 @@ p:last-child { margin-bottom: 0; }
 .clients .c-tinkers { width: 118px; }
 .clients .c-squid { width: 104px; }
 .clients .c-hbs { width: 102px; }
+/* Capped at 175px: the source artwork is only 360px wide, so going
+   larger would soften it on a retina screen. */
+.clients .c-forest { width: 175px; }
 
 @media (max-width: 760px) {
   .clients { justify-content: center; gap: 1.75rem 2.75rem; }
