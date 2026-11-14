@@ -673,7 +673,7 @@ p:last-child { margin-bottom: 0; }
    Matching heights or widths makes the compact marks look weedy. */
 .clients img { height: auto; flex: 0 0 auto; }
 .clients .c-hans { width: 173px; }
-.clients .c-incite { width: 116px; }
+.clients .c-incite { width: 121px; }
 .clients .c-tinkers { width: 118px; }
 .clients .c-squid { width: 104px; }
 .clients .c-hbs { width: 102px; }
