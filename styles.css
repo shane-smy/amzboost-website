@@ -476,6 +476,67 @@ p:last-child { margin-bottom: 0; }
   max-width: 24ch;
 }
 
+/* ---------- Year-on-year comparison ---------- */
+
+.compare {
+  border-top: 2px solid var(--ink);
+  margin-top: 0.5rem;
+}
+.compare__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  align-items: baseline;
+  padding-block: clamp(0.85rem, 1.8vw, 1.15rem);
+  border-bottom: 1px solid var(--rule);
+}
+.compare__row > span:first-child {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: -0.015em;
+}
+.compare__row > span + span {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.compare__head {
+  border-bottom: 1px solid var(--rule-strong);
+  padding-block: 0.7rem;
+}
+.compare__head > span,
+.compare__head > span + span {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+.compare__row .was { color: var(--slate-2); }
+.compare__row .up { color: var(--profit); font-weight: 500; }
+
+.compare__row--key > span:first-child { font-size: 1.05rem; }
+.compare__row--key > span + span { font-size: 1.3rem; }
+.compare__row--key .now,
+.compare__row--key .up { color: var(--profit); font-weight: 600; }
+.compare__row--key { background: linear-gradient(to right, var(--brand-tint), rgba(233,236,248,0)); }
+
+.compare__note {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: var(--slate);
+  max-width: 68ch;
+}
+
+@media (max-width: 620px) {
+  .compare__row { grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+  .compare__row > span:first-child { font-size: 0.86rem; }
+  .compare__row > span + span { font-size: 0.8rem; }
+  .compare__row--key > span + span { font-size: 1rem; }
+}
+
 /* ---------- Service rows ---------- */
 
 .rows { border-top: 1px solid var(--rule-strong); }
