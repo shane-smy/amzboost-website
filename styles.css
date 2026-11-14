@@ -637,20 +637,22 @@ p:last-child { margin-bottom: 0; }
 }
 /* Sized individually: matching heights would leave the stacked marks
    looking small and the wide ones looking oversized. */
-.clients img { width: auto; height: auto; max-width: 190px; flex: 0 0 auto; }
-.clients .c-hans { max-height: 58px; }
-.clients .c-incite { max-height: 44px; }
-.clients .c-tinkers { max-height: 56px; }
-.clients .c-squid { max-height: 52px; }
-.clients .c-hbs { max-height: 46px; }
+/* Widths set per logo so each mark carries the same optical weight.
+   Matching heights or widths makes the compact marks look weedy. */
+.clients img { height: auto; flex: 0 0 auto; }
+.clients .c-hans { width: 173px; }
+.clients .c-incite { width: 116px; }
+.clients .c-tinkers { width: 118px; }
+.clients .c-squid { width: 104px; }
+.clients .c-hbs { width: 102px; }
 
-@media (max-width: 620px) {
-  .clients { justify-content: center; gap: 1.75rem 2.5rem; }
-  .clients img { max-width: 120px; }
-  .clients .c-hans, .clients .c-tinkers { max-height: 44px; }
-  .clients .c-incite { max-height: 34px; }
-  .clients .c-squid { max-height: 40px; }
-  .clients .c-hbs { max-height: 36px; }
+@media (max-width: 760px) {
+  .clients { justify-content: center; gap: 1.75rem 2.75rem; }
+  .clients .c-hans { width: 124px; }
+  .clients .c-incite { width: 84px; }
+  .clients .c-tinkers { width: 85px; }
+  .clients .c-squid { width: 75px; }
+  .clients .c-hbs { width: 73px; }
 }
 
 /* ---------- Case study ---------- */
