@@ -797,12 +797,16 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------- CTA panel ---------- */
 
-.cta-panel {
+/* Full-bleed band so it meets the footer with no seam */
+.cta-band {
   background: var(--brand);
-  background-image: radial-gradient(circle at 88% 10%, rgba(0,234,250,0.22) 0%, rgba(0,234,250,0) 52%);
+  background-image: radial-gradient(circle at 85% 12%, rgba(0, 234, 250, 0.2) 0%, rgba(0, 234, 250, 0) 55%);
   color: #fff;
-  border-radius: var(--radius);
-  padding: clamp(1.75rem, 4vw, 3.25rem);
+  padding-block: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.cta-panel {
+  color: #fff;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: clamp(1.5rem, 4vw, 3.5rem);
