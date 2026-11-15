@@ -494,6 +494,7 @@ p:last-child { margin-bottom: 0; }
   border-top: 2px solid var(--ink);
   margin-top: 0.5rem;
 }
+.compare + .compare { margin-top: clamp(2.25rem, 4.5vw, 3.5rem); }
 .compare__row {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
